@@ -1,0 +1,45 @@
+.nav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9f9fa;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    /* box-sizing: border-box 란,
+    padding이 들어갈 때 padding+content 사이즈를 유지해주는 것.
+    ex) box-sizing을 안했을 때는
+    'width 100%+ padding 50px(좌)+50px(우)'가
+    box 전체 사이즈가 됨(width 100%로 유지하려 하기 때문)
+    하지만 box-sizing을 적용하면 padding을 포함한 box 전체 사이즈가
+    width 100%로 유지됨.
+    */
+
+    border-top: 1px solid rgba(0, 0, 0, 0.082);
+}
+.nav__list{
+    display: flex;
+    justify-content: space-between;
+}
+.nav__link{
+    position: relative;
+    color: #2e363e;
+}
+
+.nav__notification{
+    position: absolute;
+    left: 190px;
+    bottom: 38px;
+}
+
+.nav__alam{
+    background-color: tomato;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 35px;
+    bottom: 45px;
+}
