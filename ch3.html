@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Home-my first website</title>
+    <style>
+      html {
+      }
+
+      /* 3.17 States CSs */
+      button:active {
+        /* 클릭했을 때 */
+        background-color: tomato;
+      }
+      button:hover {
+        /* 마우스를 올려뒀을 때 */
+        background-color: blue;
+      }
+      button:focus {
+        /* 체크했을 때 */
+        background-color: thistle;
+      }
+      a:visited {
+        color: tomato;
+      }
+      a:hover {
+        color: teal;
+      }
+      a:focus {
+        color: violet;
+      }
+      form {
+        border: 2px solid salmon;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+      form:focus-within {
+        /* form 안에 있는 것들이 focus 되면 작동해라 */
+        border-color: seagreen;
+      }
+      form:hover input {
+        background-color: slateblue;
+      }
+      form:hover input:focus {
+        /* form 위에 마우스가 올라가면서 input을 focus했을 때 작동.
+        input 을 focus했지만 form 위에 마우스가 안 올라가있으면 작동x. */
+        background-color: teal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 3.17 States Html -->
+    <button>Hello</button>
+    <button>btn1</button>
+    <button>btn2</button>
+    <a href="https:apple.com">Go to APLLE</a>
+
+    <form>
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+    </form>
+  </body>
+</html>
