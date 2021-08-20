@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Home</title>
+    <style>
+      /* 4.0~4.1 Transitions Css */
+      a {
+        color: wheat;
+        background-color: tomato;
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 55px;
+        /* transition은 States가 없는 곳에 써야함.
+           States에 없는 속성은 변하지 않음.
+        */
+        /* transition: background-color 10s ease-in-out, color 5s ease-in-ou; */
+        transition: all 5s ease-in-out;
+        /* ease-in function: 애니메이션이 어떻게 변할지 말해주는 것.
+        < Equivalent to cubic-bezier 종류 >
+        (cubic-bezier(값, 값, 값, 값) 으로 조절할 수 있음)
+        linear: 동일 속도
+        ease-in: 애니메이션 속도가 점점 빨라짐
+        ease-out: 애니메이션 속도가 점점 느려짐
+        ease-in-out: 애니메이션 속도가 점점 빨라졌다가 점점 느려짐
+        */
+      }
+      a:hover {
+        /* 이쪽은 States 여서 transition을 쓸 수 없음 */
+        border-radius: 20px;
+        color: tomato;
+        background-color: wheat;
+      }
+
+      /* 4.2 Transform Css */
+      #dogImg {
+        border: 5px solid black;
+        border-radius: 50%;
+        transform: rotateX(30deg);
+        /* rotateY(angle값): Y축을 기준으로 (angle값)만큼 회전
+        rotateX(angle값): X축을 기준으로 (angle값)만큼 회전
+        rotateZ(angle값): Z축을 기준으로 (angle값)만큼 회전 */
+        transform: scale(0.2, 0.5);
+        /* scaleX(값)
+        scaleY(값)
+        scale(x축 값, y축 값) */
+        transform: translateX(20px);
+        /* translate: 이동
+        이때 다른 요소들에는 영향을 주지 않음. */
+      }
+
+      /* 4.3~4.4 Animation Css */
+      @keyframes superSexyCoinFlip {
+        from {
+          transform: rotateX(0);
+        }
+        to {
+          transform: rotateX(360deg) translateX(100px);
+        }
+      }
+      #amoo {
+        border: 10px solid black;
+        border-radius: 50%;
+        animation: percent 5s ease-in-out;
+      }
+      @keyframes percent {
+        0% {
+          transform: rotateY(0);
+        }
+        50% {
+          transform: rotateY(180deg) translateY(100px);
+        }
+        100% {
+          transform: rotateY(0) translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 4.0~4.1 Transitions Html -->
+    <a href="#">Go HOME</a>
+
+    <!-- 4.2 Transform Html -->
+    <img id="dogImg" src="img.jpg" />
+    <img id="amoo" src="amoo2.png" />
+    <!-- 4.3~4.4 Animation Html -->
+  </body>
+</html>
